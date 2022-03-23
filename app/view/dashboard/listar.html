@@ -1,0 +1,47 @@
+<div class="row m-0 justify-content-center">
+  <div class="col-lg-10 m-4">
+    <div class="text-center" ng-if="vm.carregando">
+      <div class="spinner-border" role="status">
+      </div>
+    </div>
+    <div class="row" ng-if="!vm.carregando">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-header justify-content-center text-center">
+            <h4><strong>Final do Cartão X Valor</strong></h4>
+          </div>
+          <div class="card-body">
+            <canvas id="line" class="chart chart-line" chart-data="vm.graficoValores.data"
+              chart-labels="vm.graficoValores.label" chart-series="vm.graficoValores.series">
+            </canvas>
+            <div class="text-center mt-3">
+              <strong><span>Valor Bruto</span>: </strong>
+              <span ng-bind="vm.totalBruto | currency: 'R$ '"></span>
+              <br>
+              <strong><span>Valor Líquido</span>: </strong>
+              <span ng-bind="vm.totalLiquido | currency: 'R$ '"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 table-cell">
+        <div class="card">
+          <div class="card-header justify-content-center text-center">
+            <h4><strong>Canal</strong></h4>
+          </div>
+          <div class="card-body">
+            <canvas id="pie" class="chart chart-pie" chart-data="vm.graficoCanal.data"
+              chart-labels="vm.graficoCanal.label">
+            </canvas>
+            <div class="text-center mt-3">
+              <div ng-repeat="(key, value) in vm.graficoCanal">
+                <strong><span ng-bind="vm.graficoCanal.label[$index]"></span>:</strong>
+                <span ng-bind="vm.graficoCanal.data[$index]"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

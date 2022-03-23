@@ -1,0 +1,108 @@
+<div class="modal-content" id="printDetalhes">
+  <div class="modal-header">
+    <h5 class="modal-title" id="modal-title">
+      <span>Detalhes</span>
+    </h5>
+    <button type="button" class="close no-print" data-dismiss="modal" ng-click="vm.fechar()">
+      <span>&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="card-body text-center">
+      <div class="row">
+        <div class="form-group col-sm-6">
+          <label class="font-weight-bold">Código</label>
+          <div class="input-group">
+            <label class="label-border form-control form-control-sm" type="text" name="id" id="id" ng-bind="vm.item.id">
+            </label>
+          </div>
+        </div>
+        <div class="form-group col-sm-6">
+          <label class="font-weight-bold">Data</label>
+          <div class="input-group">
+            <label class="label-border form-control form-control-sm" type="text" name="data" id="data"
+              ng-bind="vm.item.date | datahora">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-sm-6">
+          <label class="font-weight-bold">CPNJ</label>
+          <div class="input-group">
+            <label class="label-border form-control form-control-sm" type="number" name="cnpjRoot" id="cnpjRoot"
+              ng-bind="vm.item.cnpjRoot">
+            </label>
+          </div>
+        </div>
+        <div class=" form-group col-sm-6">
+          <label class="font-weight-bold">Tipo de Pagamento</label>
+          <div class="input-group">
+            <label class="label-border form-control form-control-sm" type="text" name="paymentType" id="paymentType"
+              ng-bind="vm.item.paymentType">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-sm-6">
+          <label class="font-weight-bold">Valor Bruto</label>
+          <div class="input-group">
+            <label class="label-border form-control form-control-sm" type="text" name="grossAmount" id="grossAmount"
+              ng-bind="vm.item.grossAmount | currency: 'R$ '">
+            </label>
+          </div>
+        </div>
+        <div class=" form-group col-sm-6">
+          <label class="font-weight-bold">Valor Líquido</label>
+          <div class="input-group">
+            <label class="label-border form-control form-control-sm" type="text" name="netAmount" id="netAmount"
+              ng-bind="vm.item.netAmount | currency: 'R$ '">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-sm-6">
+          <label class="font-weight-bold">Código do Canal</label>
+          <div class="input-group">
+            <label class="label-border form-control form-control-sm" type="number" name="channelCode" id="channelCode"
+              ng-bind="vm.item.channelCode">
+            </label>
+          </div>
+        </div>
+        <div class="form-group col-sm-6">
+          <label class="font-weight-bold">Canal</label>
+          <div class="input-group">
+            <label class="label-border form-control form-control-sm" type="text" name="channel" id="channel"
+              ng-bind="vm.item.channel">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-sm-6">
+          <label class="font-weight-bold">Bandeira do Cartão</label>
+          <div class="input-group">
+            <label class="label-border form-control form-control-sm" type="text" name="cardBrand" id="cardBrand"
+              ng-bind="vm.item.cardBrand">
+            </label>
+          </div>
+        </div>
+        <div class="form-group col-sm-6">
+          <label class="font-weight-bold">Final do Cartão</label>
+          <div class="input-group">
+            <label class="label-border form-control form-control-sm" type="text" name="truncatedCardNumber"
+              id="truncatedCardNumber" ng-bind="vm.item.truncatedCardNumber">
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-sm btn-danger no-print" type="button" ng-click="vm.fechar()">Fechar</button>
+    <button class="btn btn-sm btn-success no-print" type="button"
+      ng-click="vm.imprimir('printDetalhes')">Imprimir</button>
+  </div>
+</div>

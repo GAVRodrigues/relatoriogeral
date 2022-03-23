@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Relatório Geral</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <link rel="stylesheet" href="app/css/screen.css">
+</head>
+
+<body>
+  <ui-view></ui-view>
+
+  <!-- Core -->
+  <script src="libs/node_modules/angular/angular.js"></script>
+  <script src="libs/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="libs/node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="libs/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="libs/node_modules/ui-bootstrap4/dist/ui-bootstrap-tpls.js"></script>
+  <script src="libs/node_modules/chart.js/dist/Chart.min.js"></script>
+  <script src="libs/node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+
+  <!-- Config -->
+  <script src="app/js/config/app.modules.js"></script>
+  <script src="app/js/config/app.routes.js"></script>
+  <script src="app/js/filters/app.filter.js"></script>
+
+  <!-- Controllers -->
+  <script src="app/js/controllers/dashboard/dashboard.controller.js"></script>
+  <script src="app/js/controllers/relatorio/relatorio.controller.js"></script>
+
+  <!-- Services -->
+  <script src="app/js/services/transacao.service.js"></script>
+  <script src="app/js/util/exportar.service.js"></script>
+
+</body>
+
+</html>

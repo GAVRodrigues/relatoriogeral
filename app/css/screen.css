@@ -1,0 +1,25 @@
+@import url(../../libs/node_modules/bootstrap/dist/css/bootstrap.min.css);
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css";
+/* line 4, ../sass/screen.scss */
+.navbar {
+  color: white;
+}
+
+@media print {
+  /* line 9, ../sass/screen.scss */
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  /* line 16, ../sass/screen.scss */
+  .table-cell {
+    margin-top: 25px;
+  }
+
+  /* line 20, ../sass/screen.scss */
+  .none-cell {
+    display: none;
+  }
+}
